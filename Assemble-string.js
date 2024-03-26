@@ -26,3 +26,22 @@ Examples:
   ]
   result = "a#cd#"
 */
+
+
+// Solution
+
+function assembleString(array){  
+  return !array.length ? "" : [...array[0]].map((x, i) => {
+    let s = array.find(y => y[i] != "*")
+    return !s ? "#" : s[i]
+  }).join``
+}
+
+// or
+
+const assembleString = a => {
+  return [...Array((a[0] || []).length).keys()]
+    .map(i => a.map(s => s[i])
+    .filter(c => c != '*')[0] || '#')
+    .join('');
+}
