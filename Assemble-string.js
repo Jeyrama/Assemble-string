@@ -28,7 +28,7 @@ Examples:
 */
 
 
-// Solution
+// Solution 
 
 function assembleString(array){  
   return !array.length ? "" : [...array[0]].map((x, i) => {
